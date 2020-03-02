@@ -46,18 +46,3 @@ elem = set(list1) & set(list2) # check if an element is on both "list1" and "lis
 print(elem) # print the list
 
 # print(set(list1)) # if you want to see the list as a set
-
-    
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
