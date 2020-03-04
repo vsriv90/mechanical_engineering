@@ -42,22 +42,9 @@ for i in range(0,n): # if i is in the above given range
     list1.append(j) # add the squared values to list1
     list2.append(k) # add the cubed values to list2
     
-elem = set(list1) & set(list2) # check if an element is on both "list1" and "list2"
+elem = sorted(set(list1) & set(list2)) # check if an element is on both "list1" and "list2"
 print(elem) # print the list
 
 # print(set(list1)) # if you want to see the list as a set
-
-    
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
