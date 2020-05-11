@@ -20,17 +20,17 @@ from PIL import Image
 
 # SIMPLY SUPPORTED BEAM - Single Load: PARAMETERS
 
-f = 39 # Value of load
+f = 100 # Value of load
 
-l = 49 # Total length of beam
-a = 18 # distance from left end of beam
+l = 50 # Total length of beam
+a = 35 # distance from left end of beam
 b = (l-a) # distance from right end of beam
 
 UnitF = str('N') # To show units of force
 UnitL = str("mm") # To show units of length
 
 
-# In[2]:
+# In[5]:
 
 
 x = [0,a,l] 
@@ -46,20 +46,20 @@ plt.legend() # giving a legend to my graph
 AvX = [0,0] 
 AvY = [0,-f*b/l] 
 
-plt.plot(AvX, AvY, linestyle='--',marker='^',markersize=10) # To create the reaction line 
+plt.plot(AvX, AvY, linestyle='--',marker='^',markersize=10,color="grey") # To create the reaction line 
 plt.text(1,-f*b/l,str(round((f*b/l),2))+UnitF)  # To show the values on the points
 
 LoadX = [a,a] 
 LoadY = [0,f] 
  
-plt.plot(LoadX, LoadY, linestyle='--',marker='v',markersize=10)  # To create the force line 
+plt.plot(LoadX, LoadY, linestyle='--',marker='v',markersize=10,color="orange")  # To create the force line 
 plt.text(a+0.5,f+1,str(round((f),2))+UnitF) # (Coordiante x, Coordinate y,the value in text+Unit)
 
 
 BvX = [l,l] 
 BvY = [0,-f*a/l] 
  
-plt.plot(BvX, BvY, linestyle='--',marker='^',markersize=10) # To create the reaction line 
+plt.plot(BvX, BvY, linestyle='--',marker='^',markersize=10,color="grey") # To create the reaction line 
 plt.text(l-(l/10),-f*a/l,str(round((f*a/l),2))+UnitF) # (Coordiante x, Coordinate y,the value in text+Unit)
 
 #################### End of load entering ###########################
